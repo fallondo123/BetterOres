@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": [
+            {
+                "item": "betterores:prasiolite_block"
+            },
+            {
+                "item": "betterores:prasiolite_pillar"
+            }
+        ]
+    },
+    "result": {
+        "item": "betterores:prasiolite_stairs",
+        "count": 4
+    }
+}

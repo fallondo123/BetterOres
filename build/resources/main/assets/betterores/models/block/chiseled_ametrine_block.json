@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "betterores:block/chiseled_ametrine_block_top",
+    "side": "betterores:block/chiseled_ametrine_block"
+  }
+}

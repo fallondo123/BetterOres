@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "betterores:block/ametrine_pillar_top",
+    "side": "betterores:block/ametrine_pillar"
+  }
+}

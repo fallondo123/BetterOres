@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BC ",
+        "BB "
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:coal"
+        },
+
+        "B": {
+            "item": "minecraft:coal_block"
+        }
+    },
+    "result": {
+        "item": "betterores:carbon",
+        "count": 1
+    }
+}

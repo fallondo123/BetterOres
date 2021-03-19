@@ -1,0 +1,23 @@
+{
+    "item.betterores.ruby": "Рубін",
+    "item.betterores.ruby_material_helmet": "Рубіновий шолом",
+    "item.betterores.ruby_material_chestplate": "Рубіновий нагрудник",
+    "item.betterores.ruby_material_leggings": "Рубінові наголінники",
+    "item.betterores.ruby_material_boots": "Рубінові чоботи",
+    "item.betterores.ruby_sword": "Рубіновий меч",
+    "item.betterores.ruby_pickaxe": "Рубінове кайло",
+    "item.betterores.ruby_axe": "Рубінова сокира",
+    "item.betterores.ruby_shovel": "Рубінова лопата",
+    "block.betterores.ruby_block": "Рубіновий блок",
+    "block.betterores.ruby_ore": "Рубінова руда",
+    "item.betterores.emerald_material_helmet": "Смарагдовий шолом",
+    "item.betterores.emerald_material_chestplate": "Смарагдовий нагрудник",
+    "item.betterores.emerald_material_leggings": "Смарагдові наголінники",
+    "item.betterores.emerald_material_boots": "Смарагдові чоботи",
+    "item.betterores.emerald_sword": "Смарагдовий меч ",
+    "item.betterores.emerald_pickaxe": "Смарагдове кайло",
+    "item.betterores.emerald_axe": "Смарагдова сокира",
+    "item.betterores.emerald_shovel": "Смарагдова лопата",
+    "advancements.story.mine_ruby.title": "Це рубін!",
+    "advancements.story.mine_ruby.description": "Класична річ гри"
+}

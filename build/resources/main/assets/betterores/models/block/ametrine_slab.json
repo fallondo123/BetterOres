@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "betterores:block/ametrine_block",
+    "top": "betterores:block/ametrine_block",
+    "side": "betterores:block/ametrine_block"
+  }
+}

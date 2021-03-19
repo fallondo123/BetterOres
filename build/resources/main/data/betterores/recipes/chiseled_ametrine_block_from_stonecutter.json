@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "betterores:ametrine_block"
+    },
+
+    "result": "betterores:chiseled_ametrine_block",
+    "count": 1
+}

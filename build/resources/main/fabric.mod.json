@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "betterores",
+  "version": "0.0.7",
+
+  "name": "Better Ores",
+  "description": "This mod will add MORE ores to minecraft!",
+  "authors": [
+    "fallondo"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "GPLv3",
+  "icon": "assets/betterores/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fallondo.better.ores.BetterOres"
+    ]
+  },
+  "mixins": [
+    "betterores.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

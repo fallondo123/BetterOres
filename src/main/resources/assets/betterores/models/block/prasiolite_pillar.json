@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "betterores:block/prasiolite_pillar_top",
+    "side": "betterores:block/prasiolite_pillar"
+  }
+}

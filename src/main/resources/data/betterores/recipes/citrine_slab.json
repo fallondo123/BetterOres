@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "betterores:citrine_block"
+        }
+    },
+    "result": {
+        "item": "betterores:citrine_slab",
+        "count": 6
+    }
+}

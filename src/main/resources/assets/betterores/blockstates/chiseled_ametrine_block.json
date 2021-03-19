@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "betterores:block/chiseled_ametrine_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "betterores:block/chiseled_ametrine_block"
+    },
+    "axis=z": {
+      "model": "betterores:block/chiseled_ametrine_block_horizontal",
+      "x": 90
+    }
+  }
+}

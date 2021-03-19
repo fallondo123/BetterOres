@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "betterores:emerald_material_boots"
+    },
+
+    "addition": {
+        "item": "betterores:ruby"
+    },
+
+    "result": {
+        "item": "betterores:ruby_material_boots"
+    }
+}

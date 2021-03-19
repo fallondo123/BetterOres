@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "betterores:block/ametrine_slab"
+    },
+    "type=double": {
+      "model": "betterores:block/ametrine_block"
+    },
+    "type=top": {
+      "model": "betterores:block/ametrine_slab_top"
+    }
+  }
+}

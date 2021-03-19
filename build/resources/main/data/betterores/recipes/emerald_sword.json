@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        " # ",
+        " T "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:emerald"
+        },
+
+        "T": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "betterores:emerald_sword",
+        "count": 1
+    }
+}

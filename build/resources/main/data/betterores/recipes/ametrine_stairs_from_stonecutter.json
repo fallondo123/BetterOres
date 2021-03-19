@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "betterores:ametrine_block"
+    },
+
+    "result": "betterores:ametrine_stairs",
+    "count": 1
+}

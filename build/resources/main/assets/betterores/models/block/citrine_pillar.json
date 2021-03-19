@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "betterores:block/citrine_pillar_top",
+    "side": "betterores:block/citrine_pillar"
+  }
+}

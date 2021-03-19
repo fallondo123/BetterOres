@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "betterores:emerald_sword"
+    },
+
+    "addition": {
+        "item": "betterores:ruby_block"
+    },
+
+    "result": {
+        "item": "betterores:ruby_sword"
+    }
+}

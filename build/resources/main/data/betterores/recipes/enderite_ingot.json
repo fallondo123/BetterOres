@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "# E",
+        "EEE"
+    ],
+    "key": {
+        "#": {
+            "item": "betterores:enderite_scrap"
+        },
+        "E": {
+            "item": "minecraft:ender_eye"
+        }
+    },
+    "result": {
+        "item": "betterores:enderite_ingot",
+        "count": 1
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "betterores:citrine_block"
+    },
+
+    "result": "betterores:citrine_slab",
+    "count": 2
+}

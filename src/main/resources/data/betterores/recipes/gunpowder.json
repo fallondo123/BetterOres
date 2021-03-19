@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SCS",
+        "CSC",
+        "SCS"
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:coal"
+        },
+
+        "S": {
+            "item": "betterores:sulfur"
+        }
+    },
+    "result": {
+        "item": "minecraft:gunpowder",
+        "count": 1
+    }
+}

@@ -1,0 +1,134 @@
+fallondo/better/ores/items/Ruby.java
+ fallondo.better.ores.items.Ruby
+fallondo/better/ores/blocks/TopazBlock.java
+ fallondo.better.ores.blocks.TopazBlock
+fallondo/better/ores/blocks/SilverOre.java
+ fallondo.better.ores.blocks.SilverOre
+fallondo/better/ores/items/RoseGoldIngot.java
+ fallondo.better.ores.items.RoseGoldIngot
+fallondo/better/ores/blocks/PrasioliteSlab.java
+ fallondo.better.ores.blocks.PrasioliteSlab
+fallondo/better/ores/blocks/SulfurOre.java
+ fallondo.better.ores.blocks.SulfurOre
+fallondo/better/ores/blocks/PrasioliteOre.java
+ fallondo.better.ores.blocks.PrasioliteOre
+fallondo/better/ores/items/tools/MithrilToolMaterial.java
+ fallondo.better.ores.items.tools.MithrilToolMaterial
+fallondo/better/ores/items/tools/TopazToolMaterial.java
+ fallondo.better.ores.items.tools.TopazToolMaterial
+fallondo/better/ores/blocks/CitrinePillar.java
+ fallondo.better.ores.blocks.CitrinePillar
+fallondo/better/ores/items/TitaniumIngot.java
+ fallondo.better.ores.items.TitaniumIngot
+fallondo/better/ores/blocks/PrasioliteBlock.java
+ fallondo.better.ores.blocks.PrasioliteBlock
+fallondo/better/ores/armor/SteelArmorMaterial.java
+ fallondo.better.ores.armor.SteelArmorMaterial
+fallondo/better/ores/blocks/CopperOre.java
+ fallondo.better.ores.blocks.CopperOre
+fallondo/better/ores/items/tools/RubyToolMaterial.java
+ fallondo.better.ores.items.tools.RubyToolMaterial
+fallondo/better/ores/blocks/AmetrineOre.java
+ fallondo.better.ores.blocks.AmetrineOre
+fallondo/better/ores/items/CobaltIngot.java
+ fallondo.better.ores.items.CobaltIngot
+fallondo/better/ores/items/SteelIngot.java
+ fallondo.better.ores.items.SteelIngot
+fallondo/better/ores/items/Sulfur.java
+ fallondo.better.ores.items.Sulfur
+fallondo/better/ores/blocks/SmoothAmetrineBlock.java
+ fallondo.better.ores.blocks.SmoothAmetrineBlock
+fallondo/better/ores/items/PlatinumIngot.java
+ fallondo.better.ores.items.PlatinumIngot
+fallondo/better/ores/armor/TopazArmorMaterial.java
+ fallondo.better.ores.armor.TopazArmorMaterial
+fallondo/better/ores/blocks/SmoothPrasioliteBlock.java
+ fallondo.better.ores.blocks.SmoothPrasioliteBlock
+fallondo/better/ores/items/PainiteIngot.java
+ fallondo.better.ores.items.PainiteIngot
+fallondo/better/ores/items/tools/CustomAxeItem.java
+ fallondo.better.ores.items.tools.CustomAxeItem
+fallondo/better/ores/items/TinIngot.java
+ fallondo.better.ores.items.TinIngot
+fallondo/better/ores/blocks/CitrineBlock.java
+ fallondo.better.ores.blocks.CitrineBlock
+fallondo/better/ores/blocks/AmetrineStairs.java
+ fallondo.better.ores.blocks.AmetrineStairs
+fallondo/better/ores/items/Carbon.java
+ fallondo.better.ores.items.Carbon
+fallondo/better/ores/blocks/MithrilOre.java
+ fallondo.better.ores.blocks.MithrilOre
+fallondo/better/ores/blocks/RubyBlock.java
+ fallondo.better.ores.blocks.RubyBlock
+fallondo/better/ores/blocks/PrasiolitePillar.java
+ fallondo.better.ores.blocks.PrasiolitePillar
+fallondo/better/ores/blocks/SmoothCitrineBlock.java
+ fallondo.better.ores.blocks.SmoothCitrineBlock
+fallondo/better/ores/items/EnderiteScrap.java
+ fallondo.better.ores.items.EnderiteScrap
+fallondo/better/ores/items/SilverIngot.java
+ fallondo.better.ores.items.SilverIngot
+fallondo/better/ores/armor/MithrilArmorMaterial.java
+ fallondo.better.ores.armor.MithrilArmorMaterial
+fallondo/better/ores/items/Painite.java
+ fallondo.better.ores.items.Painite
+fallondo/better/ores/mixin/LaunchMod.java
+ fallondo.better.ores.mixin.LaunchMod
+fallondo/better/ores/items/Topaz.java
+ fallondo.better.ores.items.Topaz
+fallondo/better/ores/items/EnderiteIngot.java
+ fallondo.better.ores.items.EnderiteIngot
+fallondo/better/ores/blocks/PainiteOre.java
+ fallondo.better.ores.blocks.PainiteOre
+fallondo/better/ores/blocks/ChiseledPrasioliteBlock.java
+ fallondo.better.ores.blocks.ChiseledPrasioliteBlock
+fallondo/better/ores/items/AluminiumIngot.java
+ fallondo.better.ores.items.AluminiumIngot
+fallondo/better/ores/items/CitrineShard.java
+ fallondo.better.ores.items.CitrineShard
+fallondo/better/ores/blocks/AmetrineSlab.java
+ fallondo.better.ores.blocks.AmetrineSlab
+fallondo/better/ores/items/MithrilIngot.java
+ fallondo.better.ores.items.MithrilIngot
+fallondo/better/ores/blocks/AmetrinePillar.java
+ fallondo.better.ores.blocks.AmetrinePillar
+fallondo/better/ores/blocks/CitrineOre.java
+ fallondo.better.ores.blocks.CitrineOre
+fallondo/better/ores/blocks/AmetrineBlock.java
+ fallondo.better.ores.blocks.AmetrineBlock
+fallondo/better/ores/items/PrasioliteShards.java
+ fallondo.better.ores.items.PrasioliteShards
+fallondo/better/ores/blocks/CitrineSlab.java
+ fallondo.better.ores.blocks.CitrineSlab
+fallondo/better/ores/blocks/TinOre.java
+ fallondo.better.ores.blocks.TinOre
+fallondo/better/ores/blocks/TopazOre.java
+ fallondo.better.ores.blocks.TopazOre
+fallondo/better/ores/blocks/PrasioliteStairs.java
+ fallondo.better.ores.blocks.PrasioliteStairs
+fallondo/better/ores/items/CopperIngot.java
+ fallondo.better.ores.items.CopperIngot
+fallondo/better/ores/armor/EmeraldArmorMaterial.java
+ fallondo.better.ores.armor.EmeraldArmorMaterial
+fallondo/better/ores/items/AmethystShard.java
+ fallondo.better.ores.items.AmethystShard
+fallondo/better/ores/items/tools/CustomPickaxeItem.java
+ fallondo.better.ores.items.tools.CustomPickaxeItem
+fallondo/better/ores/items/AmetrineShards.java
+ fallondo.better.ores.items.AmetrineShards
+fallondo/better/ores/armor/RubyArmorMaterial.java
+ fallondo.better.ores.armor.RubyArmorMaterial
+fallondo/better/ores/blocks/MithrilBlock.java
+ fallondo.better.ores.blocks.MithrilBlock
+fallondo/better/ores/BetterOres.java
+ fallondo.better.ores.BetterOres
+fallondo/better/ores/blocks/RubyOre.java
+ fallondo.better.ores.blocks.RubyOre
+fallondo/better/ores/blocks/CitrineStairs.java
+ fallondo.better.ores.blocks.CitrineStairs
+fallondo/better/ores/blocks/EnderiteOre.java
+ fallondo.better.ores.blocks.EnderiteOre
+fallondo/better/ores/items/tools/EmeraldToolMaterial.java
+ fallondo.better.ores.items.tools.EmeraldToolMaterial
+fallondo/better/ores/blocks/ChiseledAmetrineBlock.java
+ fallondo.better.ores.blocks.ChiseledAmetrineBlock

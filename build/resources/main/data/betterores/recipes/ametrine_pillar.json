@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "#  "
+    ],
+    "key": {
+        "#": {
+            "item": "betterores:ametrine_block"
+        }
+    },
+    "result": {
+        "item": "betterores:ametrine_pillar",
+        "count": 2
+    }
+}

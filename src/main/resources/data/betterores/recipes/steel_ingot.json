@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CI "
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+
+        "C": {
+            "item": "betterores:carbon"
+        }
+    },
+    "result": {
+        "item": "betterores:steel_ingot",
+        "count": 1
+    }
+}

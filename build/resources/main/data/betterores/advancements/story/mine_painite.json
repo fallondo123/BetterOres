@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:story/enter_the_end",
+  "display": {
+    "icon": {
+      "item": "betterores:painite"
+    },
+    "title": {
+      "translate": "advancements.story.mine_painite.title"
+    },
+    "description": {
+      "translate": "advancements.story.mine_painite.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "painite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "betterores:painite"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "painite"
+    ]
+  ]
+}

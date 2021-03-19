@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "betterores:block/prasiolite_slab"
+    },
+    "type=double": {
+      "model": "betterores:block/prasiolite_block"
+    },
+    "type=top": {
+      "model": "betterores:block/prasiolite_slab_top"
+    }
+  }
+}

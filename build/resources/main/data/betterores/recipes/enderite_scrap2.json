@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "betterores:enderite_ore"
+    },
+    "result": "betterores:enderite_scrap",
+    "experience": 5,
+    "cookingtime": 50
+}

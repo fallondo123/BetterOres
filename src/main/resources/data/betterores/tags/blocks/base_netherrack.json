@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#c:netherrack", "required": false },
+    { "id": "#forge:netherrack", "required": false },
+    "minecraft:netherrack"
+  ]
+}

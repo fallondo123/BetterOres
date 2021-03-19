@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "betterores:topaz"
+        }
+    },
+    "result": {
+        "item": "betterores:topaz_material_boots",
+        "count": 1
+    }
+}

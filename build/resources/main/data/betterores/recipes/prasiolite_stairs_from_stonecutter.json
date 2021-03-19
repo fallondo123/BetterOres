@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "betterores:prasiolite_block"
+    },
+
+    "result": "betterores:prasiolite_stairs",
+    "count": 1
+}

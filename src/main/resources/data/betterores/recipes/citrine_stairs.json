@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": [
+            {
+                "item": "betterores:citrine_block"
+            },
+            {
+                "item": "betterores:citrine_pillar"
+            }
+        ]
+    },
+    "result": {
+        "item": "betterores:citrine_stairs",
+        "count": 4
+    }
+}

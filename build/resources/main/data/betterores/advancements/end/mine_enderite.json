@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:end/dragon_egg",
+  "display": {
+    "icon": {
+      "item": "betterores:enderite_ore"
+    },
+    "title": {
+      "translate": "advancements.story.mine_enderite.title"
+    },
+    "description": {
+      "translate": "advancements.story.mine_enderite.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "enderite_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "betterores:enderite_ore"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enderite_ore"
+    ]
+  ]
+}

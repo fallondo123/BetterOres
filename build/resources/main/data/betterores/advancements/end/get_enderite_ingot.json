@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:end/mine_enderite",
+  "display": {
+    "icon": {
+      "item": "betterores:enderite_ingot"
+    },
+    "title": {
+      "translate": "advancements.story.get_enderite_ingot.title"
+    },
+    "description": {
+      "translate": "advancements.story.get_enderite_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "enderite_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "betterores:enderite_ingot"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "enderite_ingot"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "betterores:block/smooth_citrine_block"
+    }
+  }
