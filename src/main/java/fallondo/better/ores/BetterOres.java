@@ -238,7 +238,6 @@ public class BetterOres implements ModInitializer {
 
 		// Painite
 		Registry.register(Registry.ITEM, new Identifier("betterores", "painite"), PAINITE);
-		// Registry.register(Registry.ITEM, new Identifier("betterores", "painite_ingot"), PAINITE_INGOT);
 		Registry.register(Registry.BLOCK, new Identifier("betterores", "painite_ore"), PAINITE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "painite_ore"), new BlockItem(PAINITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
@@ -389,7 +388,7 @@ public class BetterOres implements ModInitializer {
 				new Identifier("betterores", "ore_citrine"));
 		RegistryKey<ConfiguredFeature<?, ?>> orePrasioliteNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
 				new Identifier("betterores", "ore_prasiolite"));
-		RegistryKey<ConfiguredFeature<?, ?>> oreSulfurNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+		RegistryKey<ConfiguredFeature<?, ?>> oreSulfurOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
 				new Identifier("betterores", "ore_sulfur"));
 		RegistryKey<ConfiguredFeature<?, ?>> oreEnderiteEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
 				new Identifier("betterores", "ore_enderite"));
@@ -407,8 +406,8 @@ public class BetterOres implements ModInitializer {
 				oreCitrineNether);
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
 				orePrasioliteNether);
-		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
-				//oreSulfurNether);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
+				oreSulfurOverworld);
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
 				oreEnderiteEnd);
 	}
