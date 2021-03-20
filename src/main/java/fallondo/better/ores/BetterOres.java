@@ -34,9 +34,9 @@ public class BetterOres implements ModInitializer {
             new Item.Settings().group(ItemGroup.COMBAT));
     public static final ToolItem EMERALD_AXE = new CustomAxeItem(EmeraldToolMaterial.INSTANCE, 7, -3.0F,
             new Item.Settings().group(ItemGroup.TOOLS));
-    public static final ToolItem EMERALD_PICKAXE = new CustomPickaxeItem(EmeraldToolMaterial.INSTANCE, 3, -2.6F,
+    public static final ToolItem EMERALD_PICKAXE = new CustomPickaxeItem(EmeraldToolMaterial.INSTANCE, 3, -2.8F,
             new Item.Settings().group(ItemGroup.TOOLS));
-    public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 3, -2.6F,
+    public static final ToolItem EMERALD_SHOVEL = new ShovelItem(EmeraldToolMaterial.INSTANCE, 3, -2.8F,
             new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Ruby
@@ -61,9 +61,9 @@ public class BetterOres implements ModInitializer {
 			new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem RUBY_AXE = new CustomAxeItem(RubyToolMaterial.INSTANCE, 10, -3.0F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem RUBY_PICKAXE = new CustomPickaxeItem(RubyToolMaterial.INSTANCE, 3, -2.6F,
+	public static final ToolItem RUBY_PICKAXE = new CustomPickaxeItem(RubyToolMaterial.INSTANCE, 3, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 3, -2.6F,
+	public static final ToolItem RUBY_SHOVEL = new ShovelItem(RubyToolMaterial.INSTANCE, 3, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Painite
@@ -80,9 +80,9 @@ public class BetterOres implements ModInitializer {
 			new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem MITHRIL_AXE = new CustomAxeItem(MithrilToolMaterial.INSTANCE, 8, -3.0F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem MITHRIL_PICKAXE = new CustomPickaxeItem(MithrilToolMaterial.INSTANCE, 2, -2.6F,
+	public static final ToolItem MITHRIL_PICKAXE = new CustomPickaxeItem(MithrilToolMaterial.INSTANCE, 2, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem MITHRIL_SHOVEL = new ShovelItem(MithrilToolMaterial.INSTANCE, 2, -2.6F,
+	public static final ToolItem MITHRIL_SHOVEL = new ShovelItem(MithrilToolMaterial.INSTANCE, 2, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Mithril Armor
@@ -102,6 +102,15 @@ public class BetterOres implements ModInitializer {
 	public static final Item ENDERITE_SCRAP = new EnderiteScrap(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Block ENDERITE_ORE = new EnderiteOre();
 
+	public static final ToolItem ENDERITE_SWORD = new SwordItem(EnderiteToolMaterial.INSTANCE, 4, -2.2F,
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof());
+	public static final ToolItem ENDERITE_AXE = new CustomAxeItem(EnderiteToolMaterial.INSTANCE, 5, -2.8F,
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+	public static final ToolItem ENDERITE_PICKAXE = new CustomPickaxeItem(EnderiteToolMaterial.INSTANCE, 1, -2.6F,
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+	public static final ToolItem ENDERITE_SHOVEL = new ShovelItem(EnderiteToolMaterial.INSTANCE, 1.5F, -2.6F,
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+
 	// Topaz
     public static final Item TOPAZ = new Topaz(new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Block TOPAZ_BLOCK = new TopazBlock();
@@ -112,9 +121,9 @@ public class BetterOres implements ModInitializer {
 			new Item.Settings().group(ItemGroup.COMBAT));
 	public static final ToolItem TOPAZ_AXE = new CustomAxeItem(TopazToolMaterial.INSTANCE, 8, -3.0F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem TOPAZ_PICKAXE = new CustomPickaxeItem(TopazToolMaterial.INSTANCE, 3, -2.6F,
+	public static final ToolItem TOPAZ_PICKAXE = new CustomPickaxeItem(TopazToolMaterial.INSTANCE, 3, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
-	public static final ToolItem TOPAZ_SHOVEL = new ShovelItem(TopazToolMaterial.INSTANCE, 3, -2.6F,
+	public static final ToolItem TOPAZ_SHOVEL = new ShovelItem(TopazToolMaterial.INSTANCE, 3, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS));
 
 	// Topaz Armor
@@ -269,6 +278,11 @@ public class BetterOres implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("betterores", "enderite_ore"), ENDERITE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ore"), new BlockItem(ENDERITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_scrap"), ENDERITE_SCRAP);
+
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_sword"), ENDERITE_SWORD);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_axe"), ENDERITE_AXE);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_pickaxe"), ENDERITE_PICKAXE);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_shovel"), ENDERITE_SHOVEL);
 
 		// Topaz
         Registry.register(Registry.ITEM, new Identifier("betterores", "topaz"), TOPAZ);
