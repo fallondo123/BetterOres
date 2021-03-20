@@ -112,6 +112,17 @@ public class BetterOres implements ModInitializer {
 	public static final ToolItem ENDERITE_SHOVEL = new ShovelItem(EnderiteToolMaterial.INSTANCE, 1.5F, -2.6F,
 			new Item.Settings().group(ItemGroup.TOOLS).fireproof().rarity(Rarity.RARE));
 
+	public static final ArmorMaterial ENDERITE_ARMOR_MATERIAL = new EnderiteArmorMaterial();
+
+	public static final Item ENDERITE_MATERIAL_HELMET = new ArmorItem(ENDERITE_ARMOR_MATERIAL, EquipmentSlot.HEAD,
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
+	public static final Item ENDERITE_MATERIAL_CHESTPLATE = new ArmorItem(ENDERITE_ARMOR_MATERIAL, EquipmentSlot.CHEST,
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
+	public static final Item ENDERITE_MATERIAL_LEGGINGS = new ArmorItem(ENDERITE_ARMOR_MATERIAL, EquipmentSlot.LEGS,
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
+	public static final Item ENDERITE_MATERIAL_BOOTS = new ArmorItem(ENDERITE_ARMOR_MATERIAL, EquipmentSlot.FEET,
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
+
 	// Topaz
     public static final Item TOPAZ = new Topaz(new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Block TOPAZ_BLOCK = new TopazBlock();
@@ -284,6 +295,15 @@ public class BetterOres implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_axe"), ENDERITE_AXE);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_pickaxe"), ENDERITE_PICKAXE);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_shovel"), ENDERITE_SHOVEL);
+
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_helmet"),
+				ENDERITE_MATERIAL_HELMET);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_chestplate"),
+				ENDERITE_MATERIAL_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_leggings"),
+				ENDERITE_MATERIAL_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_boots"),
+				ENDERITE_MATERIAL_BOOTS);
 
 		// Topaz
         Registry.register(Registry.ITEM, new Identifier("betterores", "topaz"), TOPAZ);
