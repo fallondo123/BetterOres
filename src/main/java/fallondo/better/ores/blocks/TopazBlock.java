@@ -11,7 +11,7 @@ public class TopazBlock extends Block {
         super(FabricBlockSettings.of(Material.METAL)
             .strength(5f, 6f)
             .sounds(BlockSoundGroup.METAL)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.PICKAXES));
     }
 }

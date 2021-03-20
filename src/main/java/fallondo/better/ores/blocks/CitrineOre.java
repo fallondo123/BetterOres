@@ -20,7 +20,7 @@ public class CitrineOre extends Block {
         super(FabricBlockSettings.of(Material.STONE)
             .strength(2f, 3f)
             .sounds(BlockSoundGroup.STONE)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.PICKAXES));
     }
 

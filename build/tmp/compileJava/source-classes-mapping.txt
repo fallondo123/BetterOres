@@ -46,6 +46,8 @@ fallondo/better/ores/blocks/SmoothPrasioliteBlock.java
  fallondo.better.ores.blocks.SmoothPrasioliteBlock
 fallondo/better/ores/items/PainiteIngot.java
  fallondo.better.ores.items.PainiteIngot
+fallondo/better/ores/armor/EnderiteArmorMaterial.java
+ fallondo.better.ores.armor.EnderiteArmorMaterial
 fallondo/better/ores/items/tools/CustomAxeItem.java
  fallondo.better.ores.items.tools.CustomAxeItem
 fallondo/better/ores/items/TinIngot.java
@@ -60,6 +62,8 @@ fallondo/better/ores/blocks/MithrilOre.java
  fallondo.better.ores.blocks.MithrilOre
 fallondo/better/ores/blocks/RubyBlock.java
  fallondo.better.ores.blocks.RubyBlock
+fallondo/better/ores/items/EnderitePickaxe.java
+ fallondo.better.ores.items.EnderitePickaxe
 fallondo/better/ores/blocks/PrasiolitePillar.java
  fallondo.better.ores.blocks.PrasiolitePillar
 fallondo/better/ores/blocks/SmoothCitrineBlock.java
@@ -114,6 +118,8 @@ fallondo/better/ores/items/AmethystShard.java
  fallondo.better.ores.items.AmethystShard
 fallondo/better/ores/items/tools/CustomPickaxeItem.java
  fallondo.better.ores.items.tools.CustomPickaxeItem
+fallondo/better/ores/items/tools/EnderiteToolMaterial.java
+ fallondo.better.ores.items.tools.EnderiteToolMaterial
 fallondo/better/ores/items/AmetrineShards.java
  fallondo.better.ores.items.AmetrineShards
 fallondo/better/ores/armor/RubyArmorMaterial.java

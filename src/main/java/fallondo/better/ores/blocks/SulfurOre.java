@@ -20,7 +20,7 @@ public class SulfurOre extends Block {
         super(FabricBlockSettings.of(Material.SOIL)
             .strength(1f, 2f)
             .sounds(BlockSoundGroup.SOUL_SOIL)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.SHOVELS));
     }
 

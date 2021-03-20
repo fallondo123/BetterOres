@@ -7,6 +7,7 @@ import fallondo.better.ores.items.tools.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.*;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.util.Rarity;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.block.Block;
@@ -103,13 +104,13 @@ public class BetterOres implements ModInitializer {
 	public static final Block ENDERITE_ORE = new EnderiteOre();
 
 	public static final ToolItem ENDERITE_SWORD = new SwordItem(EnderiteToolMaterial.INSTANCE, 4, -2.2F,
-			new Item.Settings().group(ItemGroup.COMBAT).fireproof());
+			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
 	public static final ToolItem ENDERITE_AXE = new CustomAxeItem(EnderiteToolMaterial.INSTANCE, 5, -2.8F,
-			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
-	public static final ToolItem ENDERITE_PICKAXE = new CustomPickaxeItem(EnderiteToolMaterial.INSTANCE, 1, -2.6F,
-			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof().rarity(Rarity.RARE));
+	public static final ToolItem ENDERITE_PICKAXE = new EnderitePickaxe(EnderiteToolMaterial.INSTANCE, 1, -2.6F,
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof().rarity(Rarity.RARE));
 	public static final ToolItem ENDERITE_SHOVEL = new ShovelItem(EnderiteToolMaterial.INSTANCE, 1.5F, -2.6F,
-			new Item.Settings().group(ItemGroup.TOOLS).fireproof());
+			new Item.Settings().group(ItemGroup.TOOLS).fireproof().rarity(Rarity.RARE));
 
 	// Topaz
     public static final Item TOPAZ = new Topaz(new Item.Settings().group(ItemGroup.MATERIALS));

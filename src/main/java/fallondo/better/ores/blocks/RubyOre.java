@@ -18,7 +18,7 @@ public class RubyOre extends Block {
         super(FabricBlockSettings.of(Material.STONE)
             .strength(5f, 6f)
             .sounds(BlockSoundGroup.STONE)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.PICKAXES));
     }
 

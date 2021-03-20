@@ -10,7 +10,7 @@ public class EnderiteOre extends Block {
         super(FabricBlockSettings.of(Material.METAL)
             .strength(9f, 12f)
             .sounds(BlockSoundGroup.METAL)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.PICKAXES));
     }
 }

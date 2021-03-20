@@ -18,7 +18,7 @@ public class PainiteOre extends Block {
         super(FabricBlockSettings.of(Material.STONE)
             .strength(7f, 9f)
             .sounds(BlockSoundGroup.STONE)
-            .breakByHand(false)
+            .requiresTool()
             .breakByTool(FabricToolTags.PICKAXES));
     }
 
