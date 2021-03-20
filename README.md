@@ -1,0 +1,3 @@
+# BetterOres
+
+Cool readme ok
