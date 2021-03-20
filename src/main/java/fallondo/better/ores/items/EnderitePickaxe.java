@@ -1,16 +1,16 @@
 package fallondo.better.ores.items;
 
+import fallondo.better.ores.BetterOres;
 import fallondo.better.ores.items.tools.CustomPickaxeItem;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
+import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class EnderitePickaxe extends CustomPickaxeItem {
@@ -19,34 +19,22 @@ public class EnderitePickaxe extends CustomPickaxeItem {
         super(material, attackDamage, attackSpeed, settings);
     }
 
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        ItemStack itemStack = super.finishUsing(stack, world, user);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
+        user.getItemCooldownManager().set(this, 20);
         if (!world.isClient) {
-            double d = user.getX();
-            double e = user.getY();
-            double f = user.getZ();
-
-            for(int i = 0; i < 16; ++i) {
-                double g = user.getX() + (user.getRandom().nextDouble() - 0.5D) * 16.0D;
-                double h = MathHelper.clamp(user.getY() + (double)(user.getRandom().nextInt(16) - 8), 0.0D, world.getDimensionHeight() - 1);
-                double j = user.getZ() + (user.getRandom().nextDouble() - 0.5D) * 16.0D;
-                if (user.hasVehicle()) {
-                    user.stopRiding();
-                }
-
-                if (user.teleport(g, h, j, true)) {
-                    SoundEvent soundEvent = user instanceof FoxEntity ? SoundEvents.ENTITY_FOX_TELEPORT : SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
-                    world.playSound(null, d, e, f, soundEvent, SoundCategory.PLAYERS, 1.0F, 1.0F);
-                    user.playSound(soundEvent, 1.0F, 1.0F);
-                    break;
-                }
-            }
-
-            if (user instanceof PlayerEntity) {
-                ((PlayerEntity)user).getItemCooldownManager().set(this, 20);
-            }
+            EnderPearlEntity enderPearlEntity = new EnderPearlEntity(world, user);
+            enderPearlEntity.setItem(ItemStack.EMPTY);
+            enderPearlEntity.setProperties(user, user.pitch, user.yaw, 0.0F, 1.5F, 1.0F);
+            world.spawnEntity(enderPearlEntity);
         }
 
-        return itemStack;
+        //user.incrementStat(Stats.USED.getOrCreateStat(this));
+        //if (!user.abilities.creativeMode) {
+        //    itemStack.decrement(1);
+        //}
+
+        return TypedActionResult.success(itemStack, world.isClient());
     }
 }

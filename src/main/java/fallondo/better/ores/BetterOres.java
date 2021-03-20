@@ -103,7 +103,7 @@ public class BetterOres implements ModInitializer {
 	public static final Item ENDERITE_SCRAP = new EnderiteScrap(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Block ENDERITE_ORE = new EnderiteOre();
 
-	public static final ToolItem ENDERITE_SWORD = new SwordItem(EnderiteToolMaterial.INSTANCE, 4, -2.2F,
+	public static final ToolItem ENDERITE_SWORD = new EnderiteSword(EnderiteToolMaterial.INSTANCE, 4, -2.2F,
 			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
 	public static final ToolItem ENDERITE_AXE = new CustomAxeItem(EnderiteToolMaterial.INSTANCE, 5, -2.8F,
 			new Item.Settings().group(ItemGroup.TOOLS).fireproof().rarity(Rarity.RARE));

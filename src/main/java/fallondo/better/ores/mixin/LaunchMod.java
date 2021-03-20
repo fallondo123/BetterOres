@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class LaunchMod {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		System.out.println("Better ores launched!");
+		System.out.println("Better ores works fine.");
 	}
 }

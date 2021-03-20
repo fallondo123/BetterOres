@@ -24,10 +24,10 @@ fallondo/better/ores/blocks/PrasioliteBlock.java
  fallondo.better.ores.blocks.PrasioliteBlock
 fallondo/better/ores/armor/SteelArmorMaterial.java
  fallondo.better.ores.armor.SteelArmorMaterial
-fallondo/better/ores/blocks/CopperOre.java
- fallondo.better.ores.blocks.CopperOre
 fallondo/better/ores/items/tools/RubyToolMaterial.java
  fallondo.better.ores.items.tools.RubyToolMaterial
+fallondo/better/ores/misc/EnderitePearlEntity.java
+ fallondo.better.ores.misc.EnderitePearlEntity
 fallondo/better/ores/blocks/AmetrineOre.java
  fallondo.better.ores.blocks.AmetrineOre
 fallondo/better/ores/items/CobaltIngot.java
