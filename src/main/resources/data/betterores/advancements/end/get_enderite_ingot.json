@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:end/mine_enderite",
+  "parent": "betterores:end/mine_enderite",
   "display": {
     "icon": {
       "item": "betterores:enderite_ingot"

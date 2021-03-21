@@ -1,4 +1,12 @@
 {
+    "item.betterores.enderite_material_helmet": "Эндеритовый шлем",
+    "item.betterores.enderite_material_chestplate": "Эндеритовый нагрудник",
+    "item.betterores.enderite_material_leggings": "Эндеритовые поножи",
+    "item.betterores.enderite_material_boots": "Эндеритовые ботинки",
+    "item.betterores.enderite_pickaxe": "Эндеритовая кирка",
+    "item.betterores.enderite_axe": "Эндеритовый топор",
+    "item.betterores.enderite_sword": "Эндеритовый меч",
+    "item.betterores.enderite_shovel": "Эндеритовая лопата",
     "item.betterores.ruby": "Рубин",
     "item.betterores.ruby_material_helmet": "Рубиновый шлем",
     "item.betterores.ruby_material_chestplate": "Рубиновый нагрудник",
@@ -81,8 +89,8 @@
     "advancements.story.mine_ruby.description": "Классический предмет Minecraft'a",
     "advancements.story.mine_painite.title": "Текущее поколение",
     "advancements.story.mine_painite.description": "Ощутите мощь боли",
-    "advancements.end.mine_enderite.title": "Это еще что?",
-    "advancements.end.mine_enderite.description": "Земледит, незерит, эндерит...",
-    "advancements.end.get_enderite_ingot.title": "Новый незерит",
-    "advancements.end.get_enderite_ingot.description": "Земледит, незери- подождите..."
+    "advancements.story.mine_enderite.title": "Это еще что?",
+    "advancements.story.mine_enderite.description": "Земледит, незерит, эндерит...",
+    "advancements.story.get_enderite_ingot.title": "Новый незерит",
+    "advancements.story.get_enderite_ingot.description": "Земледит, незери- подождите..."
 }

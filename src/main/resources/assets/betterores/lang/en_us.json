@@ -1,4 +1,12 @@
 {
+    "item.betterores.enderite_material_helmet": "Enderite Helmet",
+    "item.betterores.enderite_material_chestplate": "Enderite Chestplate",
+    "item.betterores.enderite_material_leggings": "Enderite Leggings",
+    "item.betterores.enderite_material_boots": "Enderite Boots",
+    "item.betterores.enderite_pickaxe": "Enderite Pickaxe",
+    "item.betterores.enderite_axe": "Enderite Axe",
+    "item.betterores.enderite_sword": "Enderite Sword",
+    "item.betterores.enderite_shovel": "Enderite Shovel",
     "item.betterores.ruby": "Ruby",
     "item.betterores.ruby_material_helmet": "Ruby Helmet",
     "item.betterores.ruby_material_chestplate": "Ruby Chestplate",
@@ -81,8 +89,8 @@
     "advancements.story.mine_ruby.description": "Acquire the classic item of Minecraft",
     "advancements.story.mine_painite.title": "Pain-ite",
     "advancements.story.mine_painite.description": "Obtain the eternal pain",
-    "advancements.end.mine_enderite.title": "What is this?",
-    "advancements.end.mine_enderite.description": "Overworldite, netherite, enderite...",
-    "advancements.end.get_enderite_ingot.title": "New Netherite",
-    "advancements.end.get_enderite_ingot.description": "Overworldite, netheri- wait..."
+    "advancements.story.mine_enderite.title": "What is this?",
+    "advancements.story.mine_enderite.description": "Overworldite, netherite, enderite...",
+    "advancements.story.get_enderite_ingot.title": "New Netherite",
+    "advancements.story.get_enderite_ingot.description": "Overworldite, netheri- wait..."
 }

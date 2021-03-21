@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "betterores:topaz_pickaxe",
+    "betterores:enderite_pickaxe",
+    "betterores:ruby_pickaxe",
+    "betterores:emerald_pickaxe",
+    "betterores:mithril_pickaxe"
+  ]
+}

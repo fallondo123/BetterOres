@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "minecraft:netherite_chestplate"
+    },
+
+    "addition": {
+        "item": "betterores:enderite_ingot"
+    },
+
+    "result": {
+        "item": "betterores:enderite_material_chestplate"
+    }
+}
