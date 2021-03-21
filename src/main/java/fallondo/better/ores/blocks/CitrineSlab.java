@@ -12,6 +12,6 @@ public class CitrineSlab extends SlabBlock  {
             .strength(2f, 3f)
             .sounds(BlockSoundGroup.STONE)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 2));
     }
 }

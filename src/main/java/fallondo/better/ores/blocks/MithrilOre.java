@@ -11,6 +11,6 @@ public class MithrilOre extends Block {
             .strength(5f, 6f)
             .sounds(BlockSoundGroup.STONE)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 2));
     }
 }

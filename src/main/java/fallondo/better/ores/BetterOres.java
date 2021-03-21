@@ -123,6 +123,8 @@ public class BetterOres implements ModInitializer {
 	public static final Item ENDERITE_MATERIAL_BOOTS = new ArmorItem(ENDERITE_ARMOR_MATERIAL, EquipmentSlot.FEET,
 			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
 
+    public static final Block CHARGED_END_STONE = new ChargedEndStone();
+
 	// Topaz
     public static final Item TOPAZ = new Topaz(new Item.Settings().group(ItemGroup.MATERIALS));
     public static final Block TOPAZ_BLOCK = new TopazBlock();
@@ -290,6 +292,8 @@ public class BetterOres implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("betterores", "enderite_ore"), ENDERITE_ORE);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ore"), new BlockItem(ENDERITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_scrap"), ENDERITE_SCRAP);
+        Registry.register(Registry.BLOCK, new Identifier("betterores", "charged_end_stone"), CHARGED_END_STONE);
+        Registry.register(Registry.ITEM, new Identifier("betterores", "charged_end_stone"), new BlockItem(CHARGED_END_STONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_sword"), ENDERITE_SWORD);
 		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_axe"), ENDERITE_AXE);

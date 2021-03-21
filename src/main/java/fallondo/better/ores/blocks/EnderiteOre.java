@@ -8,9 +8,9 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 public class EnderiteOre extends Block {
     public EnderiteOre() {
         super(FabricBlockSettings.of(Material.METAL)
-            .strength(9f, 12f)
+            .strength(8f, 10f)
             .sounds(BlockSoundGroup.METAL)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 3));
     }
 }

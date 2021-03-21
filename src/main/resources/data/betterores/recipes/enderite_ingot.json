@@ -2,12 +2,15 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "###",
-        "# E",
-        "EEE"
+        "#EC",
+        "CCC"
     ],
     "key": {
         "#": {
             "item": "betterores:enderite_scrap"
+        },
+        "C": {
+            "item": "betterores:charged_end_stone"
         },
         "E": {
             "item": "minecraft:ender_eye"

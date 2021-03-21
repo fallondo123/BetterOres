@@ -17,11 +17,11 @@ import java.util.Random;
 
 public class SulfurOre extends Block {
     public SulfurOre() {
-        super(FabricBlockSettings.of(Material.SOIL)
+        super(FabricBlockSettings.of(Material.STONE)
             .strength(1f, 2f)
-            .sounds(BlockSoundGroup.SOUL_SOIL)
+            .sounds(BlockSoundGroup.STONE)
             .requiresTool()
-            .breakByTool(FabricToolTags.SHOVELS));
+            .breakByTool(FabricToolTags.PICKAXES, 2));
     }
 
     private int getExperienceWhenMined(Random random) {

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "P#P",
+        "#P#",
+        "P#P"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:end_stone"
+        },
+        "P": {
+            "item": "minecraft:dragon_breath"
+        }
+    },
+    "result": {
+        "item": "betterores:charged_end_stone",
+        "count": 1
+    }
+}

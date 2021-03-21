@@ -30,6 +30,8 @@ fallondo/better/ores/items/tools/RubyToolMaterial.java
  fallondo.better.ores.items.tools.RubyToolMaterial
 fallondo/better/ores/blocks/AmetrineOre.java
  fallondo.better.ores.blocks.AmetrineOre
+fallondo/better/ores/mixin/MixinEndermanEntity.java
+ fallondo.better.ores.mixin.MixinEndermanEntity
 fallondo/better/ores/items/CobaltIngot.java
  fallondo.better.ores.items.CobaltIngot
 fallondo/better/ores/items/SteelIngot.java
@@ -42,6 +44,8 @@ fallondo/better/ores/items/PlatinumIngot.java
  fallondo.better.ores.items.PlatinumIngot
 fallondo/better/ores/armor/TopazArmorMaterial.java
  fallondo.better.ores.armor.TopazArmorMaterial
+fallondo/better/ores/blocks/ChargedEndStone.java
+ fallondo.better.ores.blocks.ChargedEndStone
 fallondo/better/ores/blocks/SmoothPrasioliteBlock.java
  fallondo.better.ores.blocks.SmoothPrasioliteBlock
 fallondo/better/ores/items/PainiteIngot.java

@@ -11,6 +11,6 @@ public class RubyBlock extends Block {
             .strength(5f, 6f)
             .sounds(BlockSoundGroup.METAL)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 2));
     }
 }

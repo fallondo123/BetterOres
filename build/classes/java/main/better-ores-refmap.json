@@ -1,11 +1,17 @@
 {
   "mappings": {
+    "fallondo/better/ores/mixin/MixinEndermanEntity": {
+      "isPlayerStaring": "Lnet/minecraft/class_1560;method_7026(Lnet/minecraft/class_1657;)Z"
+    },
     "fallondo/better/ores/mixin/LaunchMod": {
       "init()V": "Lnet/minecraft/class_442;method_25426()V"
     }
   },
   "data": {
     "named:intermediary": {
+      "fallondo/better/ores/mixin/MixinEndermanEntity": {
+        "isPlayerStaring": "Lnet/minecraft/class_1560;method_7026(Lnet/minecraft/class_1657;)Z"
+      },
       "fallondo/better/ores/mixin/LaunchMod": {
         "init()V": "Lnet/minecraft/class_442;method_25426()V"
       }

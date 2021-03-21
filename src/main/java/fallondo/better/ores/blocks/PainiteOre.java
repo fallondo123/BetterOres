@@ -19,7 +19,7 @@ public class PainiteOre extends Block {
             .strength(7f, 9f)
             .sounds(BlockSoundGroup.STONE)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 3));
     }
 
     private int getExperienceWhenMined(Random random) {

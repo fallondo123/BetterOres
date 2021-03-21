@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvents;
 public class EnderiteArmorMaterial implements ArmorMaterial {
 
     private static final int[] BASE_DURABILITY = new int[] { 15, 15, 15, 15 };
-    private static final int[] PROTECTION_VALUES = new int[] { 1, 4, 5, 2 };
+    private static final int[] PROTECTION_VALUES = new int[] { 4, 7, 9, 4 };
 
     @Override
     public int getDurability(EquipmentSlot slot) {

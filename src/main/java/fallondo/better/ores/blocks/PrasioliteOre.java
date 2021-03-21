@@ -21,7 +21,7 @@ public class PrasioliteOre extends Block {
             .strength(2f, 3f)
             .sounds(BlockSoundGroup.STONE)
             .requiresTool()
-            .breakByTool(FabricToolTags.PICKAXES));
+            .breakByTool(FabricToolTags.PICKAXES, 2));
     }
 
     private int getExperienceWhenMined(Random random) {

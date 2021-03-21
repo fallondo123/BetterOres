@@ -4,6 +4,7 @@
   "package": "fallondo.better.ores.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinEndermanEntity"
   ],
   "client": [
     "LaunchMod"
