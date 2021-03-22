@@ -15,7 +15,7 @@ public class EnderiteToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 10.0F;
+        return 14.0F;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class EnderiteToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 4;
+        return 5;
     }
 
     @Override

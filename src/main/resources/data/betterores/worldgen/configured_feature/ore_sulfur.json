@@ -7,7 +7,7 @@
             "feature": {
               "config": {
                 "target": {
-                  "tag": "betterores:base_coal_ore",
+                  "tag": "minecraft:base_stone_overworld",
                   "predicate_type": "minecraft:tag_match"
                 },
                 "state": {

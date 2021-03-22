@@ -18,12 +18,16 @@ fallondo/better/ores/items/tools/TopazToolMaterial.java
  fallondo.better.ores.items.tools.TopazToolMaterial
 fallondo/better/ores/blocks/CitrinePillar.java
  fallondo.better.ores.blocks.CitrinePillar
+fallondo/better/ores/blocks/EnderiteBlock.java
+ fallondo.better.ores.blocks.EnderiteBlock
 fallondo/better/ores/items/EnderiteSword.java
  fallondo.better.ores.items.EnderiteSword
 fallondo/better/ores/items/TitaniumIngot.java
  fallondo.better.ores.items.TitaniumIngot
 fallondo/better/ores/blocks/PrasioliteBlock.java
  fallondo.better.ores.blocks.PrasioliteBlock
+fallondo/better/ores/configs/ModConfig.java
+ fallondo.better.ores.configs.ModConfig
 fallondo/better/ores/armor/SteelArmorMaterial.java
  fallondo.better.ores.armor.SteelArmorMaterial
 fallondo/better/ores/items/tools/RubyToolMaterial.java

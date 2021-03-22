@@ -2,10 +2,14 @@ package fallondo.better.ores;
 
 import fallondo.better.ores.armor.*;
 import fallondo.better.ores.blocks.*;
+import fallondo.better.ores.configs.ModConfig;
 import fallondo.better.ores.items.*;
 import fallondo.better.ores.items.tools.*;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Rarity;
 import net.minecraft.world.biome.Biome;
@@ -102,6 +106,7 @@ public class BetterOres implements ModInitializer {
 	public static final Item ENDERITE_INGOT = new EnderiteIngot(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item ENDERITE_SCRAP = new EnderiteScrap(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Block ENDERITE_ORE = new EnderiteOre();
+	public static final Block ENDERITE_BLOCK = new EnderiteBlock();
 
 	public static final ToolItem ENDERITE_SWORD = new EnderiteSword(EnderiteToolMaterial.INSTANCE, 4, -2.2F,
 			new Item.Settings().group(ItemGroup.COMBAT).fireproof().rarity(Rarity.RARE));
@@ -218,6 +223,9 @@ public class BetterOres implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		AutoConfig.register(ModConfig.class, Toml4jConfigSerializer::new);
+		ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+
 	    // Emerald Armor
         Registry.register(Registry.ITEM, new Identifier("betterores", "emerald_material_helmet"),
                 EMERALD_MATERIAL_HELMET);
@@ -235,102 +243,114 @@ public class BetterOres implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("betterores", "emerald_shovel"), EMERALD_SHOVEL);
 
     	// Ruby
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby"), RUBY);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ruby_block"), RUBY_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_block"),
-				new BlockItem(RUBY_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ruby_ore"), RUBY_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_ore"),
-				new BlockItem(RUBY_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.RUBY_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby"), RUBY);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ruby_block"), RUBY_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_block"),
+					new BlockItem(RUBY_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ruby_ore"), RUBY_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_ore"),
+					new BlockItem(RUBY_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
-		// Ruby Armor
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_helmet"),
-				RUBY_MATERIAL_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_chestplate"),
-				RUBY_MATERIAL_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_leggings"),
-				RUBY_MATERIAL_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_boots"),
-				RUBY_MATERIAL_BOOTS);
+			// Ruby Armor
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_helmet"),
+					RUBY_MATERIAL_HELMET);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_chestplate"),
+					RUBY_MATERIAL_CHESTPLATE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_leggings"),
+					RUBY_MATERIAL_LEGGINGS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_material_boots"),
+					RUBY_MATERIAL_BOOTS);
 
-		// Ruby Tools
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_sword"), RUBY_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_axe"), RUBY_AXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_pickaxe"), RUBY_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_shovel"), RUBY_SHOVEL);
+			// Ruby Tools
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_sword"), RUBY_SWORD);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_axe"), RUBY_AXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_pickaxe"), RUBY_PICKAXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ruby_shovel"), RUBY_SHOVEL);
+		}
 
 		// Painite
-		Registry.register(Registry.ITEM, new Identifier("betterores", "painite"), PAINITE);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "painite_ore"), PAINITE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "painite_ore"), new BlockItem(PAINITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.PAINITE_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "painite"), PAINITE);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "painite_ore"), PAINITE_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "painite_ore"), new BlockItem(PAINITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 
 		// Mithril
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_ingot"), MITHRIL_INGOT);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "mithril_ore"), MITHRIL_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_ore"), new BlockItem(MITHRIL_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "mithril_block"), MITHRIL_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_block"), new BlockItem(MITHRIL_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.MITHRIL_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_ingot"), MITHRIL_INGOT);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "mithril_ore"), MITHRIL_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_ore"), new BlockItem(MITHRIL_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "mithril_block"), MITHRIL_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_block"), new BlockItem(MITHRIL_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
-		// Mithril Tools
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_sword"), MITHRIL_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_axe"), MITHRIL_AXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_pickaxe"), MITHRIL_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_shovel"), MITHRIL_SHOVEL);
+			// Mithril Tools
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_sword"), MITHRIL_SWORD);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_axe"), MITHRIL_AXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_pickaxe"), MITHRIL_PICKAXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_shovel"), MITHRIL_SHOVEL);
 
-		// Mithril Armor
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_helmet"),
-				MITHRIL_MATERIAL_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_chestplate"),
-				MITHRIL_MATERIAL_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_leggings"),
-				MITHRIL_MATERIAL_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_boots"),
-				MITHRIL_MATERIAL_BOOTS);
+			// Mithril Armor
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_helmet"),
+					MITHRIL_MATERIAL_HELMET);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_chestplate"),
+					MITHRIL_MATERIAL_CHESTPLATE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_leggings"),
+					MITHRIL_MATERIAL_LEGGINGS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "mithril_material_boots"),
+					MITHRIL_MATERIAL_BOOTS);
+		}
 
 		// Enderite
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ingot"), ENDERITE_INGOT);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "enderite_ore"), ENDERITE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ore"), new BlockItem(ENDERITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_scrap"), ENDERITE_SCRAP);
-        Registry.register(Registry.BLOCK, new Identifier("betterores", "charged_end_stone"), CHARGED_END_STONE);
-        Registry.register(Registry.ITEM, new Identifier("betterores", "charged_end_stone"), new BlockItem(CHARGED_END_STONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.ENDERITE_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ingot"), ENDERITE_INGOT);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "enderite_ore"), ENDERITE_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_ore"), new BlockItem(ENDERITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "enderite_block"), ENDERITE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_block"), new BlockItem(ENDERITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_scrap"), ENDERITE_SCRAP);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "charged_end_stone"), CHARGED_END_STONE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "charged_end_stone"), new BlockItem(CHARGED_END_STONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_sword"), ENDERITE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_axe"), ENDERITE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_pickaxe"), ENDERITE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_shovel"), ENDERITE_SHOVEL);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_sword"), ENDERITE_SWORD);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_axe"), ENDERITE_AXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_pickaxe"), ENDERITE_PICKAXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_shovel"), ENDERITE_SHOVEL);
 
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_helmet"),
-				ENDERITE_MATERIAL_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_chestplate"),
-				ENDERITE_MATERIAL_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_leggings"),
-				ENDERITE_MATERIAL_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_boots"),
-				ENDERITE_MATERIAL_BOOTS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_helmet"),
+					ENDERITE_MATERIAL_HELMET);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_chestplate"),
+					ENDERITE_MATERIAL_CHESTPLATE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_leggings"),
+					ENDERITE_MATERIAL_LEGGINGS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "enderite_material_boots"),
+					ENDERITE_MATERIAL_BOOTS);
+		}
 
 		// Topaz
-        Registry.register(Registry.ITEM, new Identifier("betterores", "topaz"), TOPAZ);
-        Registry.register(Registry.BLOCK, new Identifier("betterores", "topaz_block"), TOPAZ_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-        Registry.register(Registry.BLOCK, new Identifier("betterores", "topaz_ore"), TOPAZ_ORE);
-        Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.TOPAZ_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz"), TOPAZ);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "topaz_block"), TOPAZ_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_block"), new BlockItem(TOPAZ_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "topaz_ore"), TOPAZ_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_ore"), new BlockItem(TOPAZ_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
-        // Topaz Tools
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_sword"), TOPAZ_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_axe"), TOPAZ_AXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_pickaxe"), TOPAZ_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_shovel"), TOPAZ_SHOVEL);
+			// Topaz Tools
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_sword"), TOPAZ_SWORD);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_axe"), TOPAZ_AXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_pickaxe"), TOPAZ_PICKAXE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_shovel"), TOPAZ_SHOVEL);
 
-		// Topaz Armor
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_helmet"),
-				TOPAZ_MATERIAL_HELMET);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_chestplate"),
-				TOPAZ_MATERIAL_CHESTPLATE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_leggings"),
-				TOPAZ_MATERIAL_LEGGINGS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_boots"),
-				TOPAZ_MATERIAL_BOOTS);
+			// Topaz Armor
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_helmet"),
+					TOPAZ_MATERIAL_HELMET);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_chestplate"),
+					TOPAZ_MATERIAL_CHESTPLATE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_leggings"),
+					TOPAZ_MATERIAL_LEGGINGS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "topaz_material_boots"),
+					TOPAZ_MATERIAL_BOOTS);
+		}
 
 		// Copper
 		//Registry.register(Registry.ITEM, new Identifier("betterores", "copper_ingot"), COPPER_INGOT);
@@ -359,58 +379,66 @@ public class BetterOres implements ModInitializer {
 				STEEL_MATERIAL_BOOTS);
 
 		// Ametrine
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_shards"), AMETRINE_SHARDS);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_ore"), AMETRINE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_ore"), new BlockItem(AMETRINE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_block"), AMETRINE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_block"), new BlockItem(AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_pillar"), AMETRINE_PILLAR);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_pillar"), new BlockItem(AMETRINE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_slab"), AMETRINE_SLAB);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_slab"), new BlockItem(AMETRINE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_stairs"), AMETRINE_STAIRS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_stairs"), new BlockItem(AMETRINE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "chiseled_ametrine_block"), CHISELED_AMETRINE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "chiseled_ametrine_block"), new BlockItem(CHISELED_AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_ametrine_block"), SMOOTH_AMETRINE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_ametrine_block"), new BlockItem(SMOOTH_AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.AMETRINE_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_shards"), AMETRINE_SHARDS);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_ore"), AMETRINE_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_ore"), new BlockItem(AMETRINE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_block"), AMETRINE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_block"), new BlockItem(AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_pillar"), AMETRINE_PILLAR);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_pillar"), new BlockItem(AMETRINE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_slab"), AMETRINE_SLAB);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_slab"), new BlockItem(AMETRINE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "ametrine_stairs"), AMETRINE_STAIRS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "ametrine_stairs"), new BlockItem(AMETRINE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "chiseled_ametrine_block"), CHISELED_AMETRINE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "chiseled_ametrine_block"), new BlockItem(CHISELED_AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_ametrine_block"), SMOOTH_AMETRINE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_ametrine_block"), new BlockItem(SMOOTH_AMETRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 
 		// Citrine
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_shard"), CITRINE_SHARD);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_ore"), CITRINE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_block"), CITRINE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_pillar"), CITRINE_PILLAR);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_pillar"), new BlockItem(CITRINE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_slab"), CITRINE_SLAB);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_slab"), new BlockItem(CITRINE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_stairs"), CITRINE_STAIRS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_stairs"), new BlockItem(CITRINE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_citrine_block"), SMOOTH_CITRINE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_citrine_block"), new BlockItem(SMOOTH_CITRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.CITRINE_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_shard"), CITRINE_SHARD);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_ore"), CITRINE_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_ore"), new BlockItem(CITRINE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_block"), CITRINE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_block"), new BlockItem(CITRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_pillar"), CITRINE_PILLAR);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_pillar"), new BlockItem(CITRINE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_slab"), CITRINE_SLAB);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_slab"), new BlockItem(CITRINE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "citrine_stairs"), CITRINE_STAIRS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "citrine_stairs"), new BlockItem(CITRINE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_citrine_block"), SMOOTH_CITRINE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_citrine_block"), new BlockItem(SMOOTH_CITRINE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 
 		// Prasiolite
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_shards"), PRASIOLITE_SHARDS);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_ore"), PRASIOLITE_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_ore"), new BlockItem(PRASIOLITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_block"), PRASIOLITE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_block"), new BlockItem(PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_pillar"), PRASIOLITE_PILLAR);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_pillar"), new BlockItem(PRASIOLITE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_slab"), PRASIOLITE_SLAB);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_slab"), new BlockItem(PRASIOLITE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_stairs"), PRASIOLITE_STAIRS);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_stairs"), new BlockItem(PRASIOLITE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "chiseled_prasiolite_block"), CHISELED_PRASIOLITE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "chiseled_prasiolite_block"), new BlockItem(CHISELED_PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_prasiolite_block"), SMOOTH_PRASIOLITE_BLOCK);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_prasiolite_block"), new BlockItem(SMOOTH_PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.PRASIOLITE_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_shards"), PRASIOLITE_SHARDS);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_ore"), PRASIOLITE_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_ore"), new BlockItem(PRASIOLITE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_block"), PRASIOLITE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_block"), new BlockItem(PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_pillar"), PRASIOLITE_PILLAR);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_pillar"), new BlockItem(PRASIOLITE_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_slab"), PRASIOLITE_SLAB);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_slab"), new BlockItem(PRASIOLITE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "prasiolite_stairs"), PRASIOLITE_STAIRS);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "prasiolite_stairs"), new BlockItem(PRASIOLITE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "chiseled_prasiolite_block"), CHISELED_PRASIOLITE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "chiseled_prasiolite_block"), new BlockItem(CHISELED_PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "smooth_prasiolite_block"), SMOOTH_PRASIOLITE_BLOCK);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "smooth_prasiolite_block"), new BlockItem(SMOOTH_PRASIOLITE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 
 		// Sulfur
-		Registry.register(Registry.ITEM, new Identifier("betterores", "sulfur"), SULFUR);
-		Registry.register(Registry.BLOCK, new Identifier("betterores", "sulfur_ore"), SULFUR_ORE);
-		Registry.register(Registry.ITEM, new Identifier("betterores", "sulfur_ore"), new BlockItem(SULFUR_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		if (config.SULFUR_ORE == true) {
+			Registry.register(Registry.ITEM, new Identifier("betterores", "sulfur"), SULFUR);
+			Registry.register(Registry.BLOCK, new Identifier("betterores", "sulfur_ore"), SULFUR_ORE);
+			Registry.register(Registry.ITEM, new Identifier("betterores", "sulfur_ore"), new BlockItem(SULFUR_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
+		}
 
 		// Ore Generation
 		RegistryKey<ConfiguredFeature<?, ?>> oreRubyOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,

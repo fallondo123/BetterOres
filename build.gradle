@@ -12,6 +12,8 @@ group = project.maven_group
 
 repositories {
 	jcenter()
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/"}
 }
 
 dependencies {
@@ -26,11 +28,11 @@ dependencies {
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 
-	modApi("me.shedaniel.cloth:config-2:4.8.3") {
+	modApi("me.shedaniel.cloth:cloth-config-fabric:4.11.15") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
-	include "me.shedaniel.cloth:config-2:4.8.3"
+	modImplementation "com.terraformersmc:modmenu:1.16.8"
 }
 
 processResources {
